@@ -5,7 +5,6 @@ Module GameOfLife
 
 
     Public Sub Main()
-
         cells = New Boolean(Height - 1, Width - 1) {}
         _GenerateField()
     End Sub
@@ -36,8 +35,8 @@ Module GameOfLife
     Function _GetNeighbors(x As Integer, y As Integer)
         Dim numOfAliveNeighbors As Integer = 0
 
-        For i As Integer = x - 1 To x + 2 - 1
-            For j As Integer = y - 1 To y + 2 - 1
+        For i As Integer = x - 1 To x + 1
+            For j As Integer = y - 1 To y + 1
                 If Not ((i < 0 OrElse j < 0) OrElse (i >= Height OrElse j >= Width)) Then
                     If cells(i, j) = True Then numOfAliveNeighbors += 1
                 End If
