@@ -1,3 +1,9 @@
+Imports System
+Imports System.Console
+
+' index i represents the columns, or x axis
+' index j represents the rows, or y axis
+
 Module GameOfLife
     Dim Height As Integer = 10
     Dim Width As Integer = 30
@@ -49,7 +55,7 @@ Module GameOfLife
         For i As Integer = 0 To Width - 1
             For j As Integer = 0 To Height - 1
                 Console.WriteLine(If(cells(i, j), "x", " "))
-                If j = Width - 1 Then Console.WriteLine(vbCr)
+                If j = Width - 1 Then Console.WriteLine("")
             Next
         Next
 
